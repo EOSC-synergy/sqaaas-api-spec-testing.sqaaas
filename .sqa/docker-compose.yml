@@ -1,0 +1,16 @@
+services:
+  node:
+    build:
+      args: {}
+      context: ''
+      dockerfile: ''
+    command: sleep infinity
+    environment: {}
+    hostname: sqaaas-api-spec-node
+    image: node
+    volumes:
+    - source: ./
+      target: /sqaaas-api-spec
+      type: bind
+    working_dir: /sqaaas-api-spec
+version: '3.7'
