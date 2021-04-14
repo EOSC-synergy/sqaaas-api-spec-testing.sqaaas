@@ -1,0 +1,19 @@
+config:
+  credentials: []
+  project_repos:
+    sqaaas-api-spec:
+      branch: master
+      deploy_template: .sqa/docker-compose.yml
+      repo: https://github.com/EOSC-synergy/sqaaas-api-spec.git
+environment: {}
+sqa_criteria:
+  qc_doc:
+    repos:
+      sqaaas-api-spec:
+        commands:
+        - npm --prefix /sqaaas-api-spec install
+        container: node
+        tox:
+          testenv: []
+          tox_file: ''
+timeout: 600
